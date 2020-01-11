@@ -33,11 +33,11 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 
 The Dockerfile has been created to handle the production build and environment in one process, so there is no need to run `yarn build` before running Docker.
 
-### `docker build . -t [DOCKER ID]/review-site-example`
+### `docker build . -t review-site-example`
 
 This command instructs Docker to create an image.
 
-### `docker run -p 8080:80 [DOCKER ID]/review-site-example`
+### `docker run -p 8080:80 review-site-example`
 
 Runs the image locally, now simply navigate to `http://localhost:8080` in your browser!
 
