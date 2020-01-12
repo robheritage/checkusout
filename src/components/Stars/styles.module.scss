@@ -1,0 +1,13 @@
+.stars {
+  display: inline-block;
+
+  &__star {
+    display: inline;
+    font-size: 1.25em;
+    color: gold;
+
+    &__blank {
+      color: grey;
+    }
+  }
+}

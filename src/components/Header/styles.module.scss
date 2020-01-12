@@ -1,0 +1,27 @@
+@import "../../styles/settings";
+
+.header {
+  display: block;
+  width: 100%;
+  height: 80px;
+  z-index: 9999;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  background-color: transparent;
+  padding: 0 $spacer;
+
+  &__logo {
+    flex: 1 1;
+  }
+
+  &__nav {
+    padding-left: $spacer;
+
+    &__item {
+      margin-left: $spacer;
+    }
+  }
+}
