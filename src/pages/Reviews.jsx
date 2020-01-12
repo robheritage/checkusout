@@ -1,11 +1,11 @@
 import React, { useContext } from 'react';
 import { Helmet } from 'react-helmet';
+import { Link } from 'react-router-dom';
 import { meanBy } from 'lodash';
 
 import { ReviewContext } from '../contexts/ReviewContext';
 
-import Stars from '../components/Stars';
-import StarChart from '../components/StarChart';
+import { Container, Button, Stars, StarChart, Card } from '../components';
 
 const Reviews = () => {
   const { reviews } = useContext(ReviewContext);
@@ -14,41 +14,54 @@ const Reviews = () => {
   return (
     <>
       <Helmet>
-        <title>CheckUsOut.com Reviews | Read Customer Reviews of CheckUsOut.com</title>
+        <title>Checkusout.com Reviews | Read Customer Reviews of Checkusout.com</title>
       </Helmet>
-      <div style={{ maxWidth: 600, margin: '0 auto 2rem' }}>
+      <Container>
         <h1 style={{ marginBottom: '2rem', textAlign: 'center' }}>Customer Reviews</h1>
-        <div style={{ display: 'flex', flexDirection: 'row', marginBottom: '1.5rem' }}>
+        <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', marginBottom: '1.5rem' }}>
           {/* Overall Rating */}
-          <div style={{ width: '250px', textAlign: 'center', fontSize: '1.5rem' }}>
+          <div style={{ flex: '1 1 30%', textAlign: 'center', fontSize: '1.25rem' }}>
             <div><strong>{average} / 5</strong></div>
             <Stars count={average} />
           </div>
           {/* Chart */}
-          <div style={{ flex: '1 1', paddingLeft: '1rem' }}>
+          <div style={{ flex: '1 1 70%', paddingLeft: '1rem' }}>
             <StarChart ratings={reviews.map(r => r.rating)} />
           </div>
         </div>
         <p style={{ textAlign: 'center' }}>
           Showing <strong>{reviews.length}</strong> of <strong>{reviews.length}</strong> reviews
         </p>
+
         {/* List of Reviews */}
         <ul style={{ margin: 0, padding: 0 }}>
           {reviews.map(r => (
-            <li key={r.id} style={{ listStyle: 'none', padding: '1.5rem', backgroundColor: 'white', marginBottom: '1rem' }}>
-              <h4>{ r.title || `${r.review.replace(/^(.{20}[^\s]*).*/, "$1")}...` }</h4>
-              <p>
-                <Stars count={r.rating} />
-                &nbsp;<strong>{`${r.rating}/5`}</strong></p>
-              <p>{r.review}</p>
-              <div style={{ display: 'flex', flexDirection: 'row', fontSize: '0.8rem' }}>
-                <strong style={{ flex: '1 1', paddingRight: '1rem' }}>{r.name || "Anonymous"}</strong>
-                <span style={{ color: 'lightgrey' }}>{r.date}</span>
-              </div>
-            </li>
+            <Card as="li" key={r.id} style={{ marginBottom: '1rem' }}>
+              <Card.Header as="h4" heading={ r.title || `${r.review.replace(/^(.{20}[^\s]*).*/, "$1")}...` } />
+              <Card.Content>
+                <div style={{ marginBottom: '.5rem' }}>
+                  <Stars count={r.rating} />
+                  &nbsp;<strong>{`${r.rating}/5`}</strong>
+                </div>
+                { r.review }
+              </Card.Content>
+              <Card.Footer>
+                <div style={{ flex: 1, paddingRight: '1rem' }}>
+                  <strong>{r.name || "Anonymous"}</strong>
+                </div>
+                <span style={{ color: '#999' }}>{r.date}</span>
+              </Card.Footer>
+            </Card>
           ))}
         </ul>
-      </div>
+        <Button
+          as={Link}
+          to="/add-review"
+          block
+        >
+          Write a Review
+        </Button>
+      </Container>
     </>
   );
 };

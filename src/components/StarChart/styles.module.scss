@@ -1,5 +1,37 @@
-.chart {
+.star-chart {
   display: block;
   margin: 0;
-  padding: 0;
+  padding: .5em;
+  background-color: white;
+  border: 1px solid lightgrey;
+
+  &__item {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 1rem;
+    line-height: 1;
+
+    &__stars {
+      font-size: 1rem;
+    }
+
+    &__bar {
+      margin: 0 1em;
+      flex: 1;
+      height: .5em;
+      background-color: lightgrey;
+
+      &__rating {
+        display: block;
+        background-color: green;
+        height: 100%;
+      }
+    }
+
+    &__count {
+      font-size: .8em;
+    }
+  }
 }

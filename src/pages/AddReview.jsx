@@ -5,9 +5,9 @@ const AddReview = () => {
   return (
     <>
       <Helmet>
-        <title>Checkout.com Reviews | Add Review</title>
+        <title>Checkusout.com Reviews | Add Review</title>
       </Helmet>
-      Add a Review for Checkout.com
+      Add a Review for Checkusout.com
     </>
   );
 };

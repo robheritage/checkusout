@@ -10,7 +10,7 @@ const Layout = ({ children }) => {
         { children }
       </div>
       <footer className={style.layout__footer}>
-        &copy; 2019 Checkout.com
+        &copy; 2020 Checkusout.com
       </footer>
     </main>
   );

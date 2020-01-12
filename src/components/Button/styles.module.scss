@@ -1,0 +1,13 @@
+$button-padding-x: 1em;
+$button-padding-y: .5em;
+
+.button {
+  display: inline-block;
+  text-align: center;
+  padding: $button-padding-y $button-padding-x;
+
+  &__block {
+    display: block;
+    width: 100%;
+  }
+}

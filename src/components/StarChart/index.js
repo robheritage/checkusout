@@ -1,3 +1,1 @@
-import StarChart from './StarChart';
-
-export default StarChart;
+export { default } from './StarChart';
