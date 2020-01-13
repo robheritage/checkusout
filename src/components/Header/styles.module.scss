@@ -14,14 +14,13 @@
   padding: 0 $spacer;
 
   &__logo {
-    flex: 1 1;
+    min-width: 115px;
   }
 
   &__nav {
+    flex: 1;
     padding-left: $spacer;
-
-    &__item {
-      margin-left: $spacer;
-    }
+    text-align: right;
+    white-space: nowrap;
   }
 }

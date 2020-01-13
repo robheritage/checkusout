@@ -12,12 +12,15 @@ const Button = ({
   onClick,
   href,
   block,
+  theme,
+  ghost,
   ...props
 }) => {
   const Element = href ? 'a' : Tag;
   return (
     <Element
       className={classnames(style.button, {
+        [style[`button__${theme}${ghost ? '__ghost' : ''}`]]: theme,
         [style.button__block]: block,
       }, className)}
       href={href}
@@ -42,6 +45,11 @@ Button.propTypes = {
   onClick: PropTypes.func,
   href: PropTypes.string,
   block: PropTypes.bool,
+  theme: PropTypes.oneOf([
+    'primary',
+    'secondary',
+  ]),
+  ghost: PropTypes.bool,
 };
 
 Button.defaultProps = {
@@ -51,6 +59,8 @@ Button.defaultProps = {
   href: null,
   block: false,
   type: 'button',
+  theme: null,
+  ghost: false,
 };
 
 export default Button;

@@ -1,0 +1,15 @@
+/**
+ * Page-level styling (e.g. HTML and BODY elements).
+ */
+
+ html {
+  font-size: $font-size-base;
+  line-height: $line-height-base;
+  font-family: $font-family-base;
+  background-color: $color-body-bg;
+  color: $color-body-text;
+}
+
+body {
+  min-height: 100vh;
+}

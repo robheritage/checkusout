@@ -1,5 +1,35 @@
-// Spacer
+// Global spacer value
+$spacer:                      1rem !default;
 
-$spacer: 1rem !default;
+// Fonts
+$font-family-base:            'Roboto', 'Arial', sans-serif !default;
+$font-size-base:              16px !default;
+$font-size-lg:                1.25rem !default;
+$font-size-sm:                .875rem !default;
+$line-height-base:            1.5 !default;
 
-$font-size-base: 16px !default;
+// Headings
+$h1-font-size:                2.5rem !default;
+$h2-font-size:                2rem !default;
+$h3-font-size:                1.75rem !default;
+$h4-font-size:                1.5rem !default;
+$h5-font-size:                1.25rem !default;
+$h6-font-size:                1rem !default;
+
+$headings-margin-bottom:      ($spacer * 1.5) !default;
+$headings-font-family:        inherit !default;
+$headings-font-weight:        500 !default;
+$headings-line-height:        1.2 !default;
+
+// Links
+$link-decoration:             underline !default;
+$link-hover-decoration:       none !default;
+
+// Border radius
+$border-radius:               3px !default;
+
+// Default box shadow
+$box-shadow:                rgba(121, 131, 149, 0.2) 1px 2px 5px 0px !default;
+
+// Default transition
+$transition-base:             all .2s ease-in-out !default;

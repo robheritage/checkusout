@@ -1,9 +1,12 @@
+@import '../../styles/settings';
+
 .star-chart {
   display: block;
   margin: 0;
   padding: .5em;
   background-color: white;
-  border: 1px solid lightgrey;
+  @include box-shadow();
+  @include border-radius();
 
   &__item {
     list-style: none;

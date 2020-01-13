@@ -1,0 +1,99 @@
+/**
+ * A more opinionated reset that sits on top of Normalize.css.
+ */
+
+ html {
+  -ms-text-size-adjust: 100%;
+  -ms-overflow-style: scrollbar;
+  -webkit-tap-highlight-color: rgba(black, 0);
+ }
+
+ @at-root {
+  @-ms-viewport {
+    width: device-width;
+  }
+}
+
+// Set an explicit initial text-align value so that we can later use the
+// the `inherit` value on things like `<th>` elements.
+body {
+  margin: 0;
+  text-align: left;
+}
+
+// Suppress the focus outline on elements that cannot be accessed via keyboard.
+// This prevents an unwanted focus outline from appearing around elements that
+// might still respond to pointer events.
+//
+// Credit: https://github.com/suitcss/base
+[tabindex="-1"]:focus {
+  outline: 0 !important;
+}
+
+// Margins
+/**
+ * Always declare margins in the same direction:
+ * csswizardry.com/2012/06/single-direction-margin-declarations
+ */
+h1, h2, h3, h4, h5, h6,
+p, ol, ul, dl, pre {
+  margin-top:  0;
+}
+
+p, ol, ul, dl,
+address, label, pre {
+  margin-bottom: $spacer;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: $spacer * 1.5;
+}
+
+// Remove trailing margins from nested lists
+ol ol,
+ul ul,
+ol ul,
+ul ol {
+  margin-bottom: 0;
+}
+
+//
+// Forms
+//
+
+label {
+  display: inline-block;
+}
+
+// Remove the default `border-radius` that macOS Chrome adds.
+//
+// Details at https://github.com/twbs/bootstrap/issues/24093
+button {
+  border-radius: 0;
+}
+
+// Work around a Firefox/IE bug where the transparent `button` background
+// results in a loss of the default `button` focus styles.
+//
+// Credit: https://github.com/suitcss/base/
+button:focus {
+  outline: 1px dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+}
+
+input[type="date"],
+input[type="time"],
+input[type="datetime-local"],
+input[type="month"] {
+  // Remove the default appearance of temporal inputs to avoid a Mobile Safari
+  // bug where setting a custom line-height prevents text from being vertically
+  // centered within the input.
+  // See https://bugs.webkit.org/show_bug.cgi?id=139848
+  // and https://github.com/twbs/bootstrap/issues/11266
+  -webkit-appearance: listbox;
+}
+
+textarea {
+  // Textareas should really only resize vertically so they don't break their (horizontal) containers.
+  resize: vertical;
+}

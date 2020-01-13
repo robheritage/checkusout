@@ -54,10 +54,13 @@ const Reviews = () => {
             </Card>
           ))}
         </ul>
+
+        {/* Write Review button */}
         <Button
           as={Link}
           to="/add-review"
           block
+          theme="primary"
         >
           Write a Review
         </Button>

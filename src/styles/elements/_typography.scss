@@ -1,0 +1,32 @@
+/**
+ * Base Typography settings e.g. headings 1-6
+ */
+
+//
+// Headings
+//
+
+h1, h2, h3, h4, h5, h6,
+.u-h1, .u-h2, .u-h3, .u-h4, .u-h5, .u-h6 {
+  margin-bottom: $headings-margin-bottom;
+  font-family: $headings-font-family;
+  font-weight: $headings-font-weight;
+  line-height: $headings-line-height;
+  color: $color-headings;
+}
+
+h1, .u-h1 { font-size: $h1-font-size; }
+h2, .u-h2 { font-size: $h2-font-size; }
+h3, .u-h3 { font-size: $h3-font-size; }
+h4, .u-h4 { font-size: $h4-font-size; }
+h5, .u-h5 { font-size: $h5-font-size; }
+h6, .u-h6 { font-size: $h6-font-size; }
+
+//
+// Emphasis
+//
+
+small {
+  font-size: $font-size-sm;
+  font-weight: normal;
+}

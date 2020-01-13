@@ -1,2 +1,31 @@
-$color-body-bg: #F0F3F7 !default;
-$color-primary: #00b48f;
+// Theme colours
+$color-primary:     #00b48f !default;
+$color-secondary:   #00122c !default;
+
+$theme-colors: () !default;
+$theme-colors: map-merge(
+  (
+    "primary":    $color-primary,
+    "secondary":  $color-secondary,
+  ),
+  $theme-colors
+);
+
+// Base
+$color-body-bg:     #F0F3F7 !default;
+$color-body-text:   #00122c !default;
+
+// Headings
+$color-headings:      inherit !default;
+
+// Links
+$link-color:          $color-primary !default;
+$link-hover-color:    $link-color !default;
+
+// Customize the light and dark text colors for use in our YIQ color contrast function.
+$yiq-text-dark:       $color-body-text !default;
+$yiq-text-light:      white !default;
+
+// The yiq lightness value that determines when the lightness of color changes from "dark" to "light".
+// Acceptable values are between 0 and 255.
+$yiq-contrasted-threshold:    150 !default;
