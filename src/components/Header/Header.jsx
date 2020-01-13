@@ -13,21 +13,8 @@ const Header = () => {
         </Link>
       </div>
       <nav className={style.header__nav}>
-        <Button
-          as={Link}
-          to="/"
-          theme="secondary"
-          ghost
-        >
-          Reviews
-        </Button>&nbsp;
-        <Button
-          as={Link}
-          to="/add-review"
-          theme="primary"
-        >
-          Review Us
-        </Button>
+        <Link to="/">Reviews</Link>&nbsp;&nbsp;
+        <Link to="/add-review">Review Us</Link>&nbsp;
       </nav>
     </header>
   );

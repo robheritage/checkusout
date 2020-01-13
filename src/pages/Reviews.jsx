@@ -17,36 +17,36 @@ const Reviews = () => {
         <title>Checkusout.com Reviews | Read Customer Reviews of Checkusout.com</title>
       </Helmet>
       <Container>
-        <h1 style={{ marginBottom: '2rem', textAlign: 'center' }}>Customer Reviews</h1>
-        <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', marginBottom: '1.5rem' }}>
+        <h1 className="u-text-center  u-mb-2">Customer Reviews</h1>
+        <div className="u-mb-1" style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
           {/* Overall Rating */}
-          <div style={{ flex: '1 1 30%', textAlign: 'center', fontSize: '1.25rem' }}>
+          <div className="u-text-center" style={{ flex: '1 1 30%', fontSize: '1.25rem' }}>
             <div><strong>{average} / 5</strong></div>
             <Stars count={average} />
           </div>
           {/* Chart */}
-          <div style={{ flex: '1 1 70%', paddingLeft: '1rem' }}>
+          <div className="u-pl-1" style={{ flex: '1 1 70%' }}>
             <StarChart ratings={reviews.map(r => r.rating)} />
           </div>
         </div>
-        <p style={{ textAlign: 'center' }}>
+        <p className="u-text-center">
           Showing <strong>{reviews.length}</strong> of <strong>{reviews.length}</strong> reviews
         </p>
 
         {/* List of Reviews */}
-        <ul style={{ margin: 0, padding: 0 }}>
+        <ul className="u-mp-0">
           {reviews.map(r => (
-            <Card as="li" key={r.id} style={{ marginBottom: '1rem' }}>
+            <Card as="li" key={r.id} className="u-mb-1">
               <Card.Header as="h4" heading={ r.title || `${r.review.replace(/^(.{20}[^\s]*).*/, "$1")}...` } />
               <Card.Content>
-                <div style={{ marginBottom: '.5rem' }}>
+                <div className="u-mb-half">
                   <Stars count={r.rating} />
                   &nbsp;<strong>{`${r.rating}/5`}</strong>
                 </div>
                 { r.review }
               </Card.Content>
               <Card.Footer>
-                <div style={{ flex: 1, paddingRight: '1rem' }}>
+                <div className="u-pr-1" style={{ flex: 1 }}>
                   <strong>{r.name || "Anonymous"}</strong>
                 </div>
                 <span style={{ color: '#999' }}>{r.date}</span>

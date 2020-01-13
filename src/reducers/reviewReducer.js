@@ -7,8 +7,8 @@ export const reviewReducer = (state, action) => {
         name: action.review.name,
         email: action.review.email,
         title: action.review.title,
-        review: action.review.review,
         rating: action.review.rating,
+        review: action.review.review,
         date: "Just now",
         id: uuid()}
       ]
