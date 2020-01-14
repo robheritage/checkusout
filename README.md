@@ -1,4 +1,4 @@
-## Welcome to my Review Site Example app
+## Welcome to "Checkusout" my example review site!
 
 This app just uses Create React App but also has the convenience of a Dockerfile so you can run the built application within a Docker container.
 
@@ -33,11 +33,11 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 
 The Dockerfile has been created to handle the production build and environment in one process, so there is no need to run `yarn build` before running Docker.
 
-### `docker build . -t review-site-example`
+### `docker build . -t checkusout`
 
 This command instructs Docker to create an image.
 
-### `docker run -p 8080:80 review-site-example`
+### `docker run -p 8080:80 checkusout`
 
 Runs the image locally, now simply navigate to `http://localhost:8080` in your browser!
 
