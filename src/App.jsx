@@ -1,5 +1,5 @@
 import React from 'react';
-import { Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import ReviewContextProvider from './contexts/ReviewContext';
 
@@ -10,12 +10,14 @@ import AddReview from './pages/AddReview';
 
 const App = () => (
   <ReviewContextProvider>
-    <Layout>
-      <Switch>
-        <Route path="/" exact component={Reviews} />
-        <Route path="/add-review" component={AddReview} />
-      </Switch>
-    </Layout>
+    <Router>
+      <Layout>
+        <Switch>
+          <Route path="/" exact component={Reviews} />
+          <Route path="/add-review" component={AddReview} />
+        </Switch>
+      </Layout>
+    </Router>
   </ReviewContextProvider>
 );
 

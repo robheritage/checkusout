@@ -1,8 +1,8 @@
 @import '../../styles/settings';
 
-$button-padding-x: 1em;
-$button-padding-y: .875em;
-$button-shadow: rgba(123, 141, 147, 0.15) 0px 1px 3px 0px;
+$button-padding-x: $input-padding-x;
+$button-padding-y: $input-padding-y;
+$button-shadow: $input-box-shadow;
 $button-color: $color-body-text;
 
 .button {

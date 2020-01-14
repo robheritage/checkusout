@@ -1,0 +1,11 @@
+@import '../../styles/settings';
+
+.input {
+  display: block;
+  width: 100%;
+  background-color: white;
+  border: 1px solid #dfe7eb;
+  border-radius: $border-radius;
+  padding: $input-padding-y $input-padding-x;
+  box-shadow: $input-box-shadow;
+}

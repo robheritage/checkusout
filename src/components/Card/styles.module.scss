@@ -5,6 +5,7 @@ $card-padding-y: 1.5rem;
 
 .card {
   display: block;
+  position: relative;
   background-color: white;
   @include box-shadow();
   @include border-radius();
