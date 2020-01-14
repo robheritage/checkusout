@@ -1,9 +1,10 @@
-# Stage 1 - Build the app
+# Stage 1 - Run tests and build the app
 FROM node:10.16.3 as build
 WORKDIR /usr/src/app
 COPY package.json yarn.lock ./
 RUN yarn
 COPY . ./
+RUN CI=true yarn test
 RUN yarn build
 
 # Stage 2 - Production environment

@@ -1,6 +1,6 @@
 import uuid from 'uuid/v4';
 
-export const reviewReducer = (state, action) => {
+export const reviewReducer = (state = [], action) => {
   switch (action.type) {
     case 'ADD_REVIEW':
       return [{

@@ -1,7 +1,9 @@
 {
-  "name": "review-site",
+  "name": "checkusout.com",
   "version": "0.1.0",
   "private": true,
+  "description": "An example Review site for Checkout.com's Senior Front-End Engineer code test",
+  "author": "Rob Heritage",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
@@ -42,7 +44,5 @@
       "last 1 safari version"
     ]
   },
-  "devDependencies": {
-    "prettier": "1.19.1"
-  }
+  "devDependencies": {}
 }
