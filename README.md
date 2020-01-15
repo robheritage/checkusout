@@ -49,3 +49,8 @@ Runs the image locally, now simply navigate to `http://localhost:8080` in your b
 - `Formik` - Makes building forms in React simple!
 - `Yup` - Used with `Formik` to specify the form schema and validation rules.
 - `React Stars` - For the displaying of reviews, I wanted to code my own star rating component, which I did, but due to time constraints I opted to use this package for submitting a rating.
+
+## DevOps
+
+- `Git` - Open source version-control system. For this project I just developed straight to the `master` branch, however normally I would adopt the `GitFlow` model.
+- `Docker` - Used to create, run and deploy the application within a container. I decided to use it for this project to show I am comfortable using Docker as well as negating the need to install all dependencies etc to run the application, with Docker everything is installed and built within the container, so you just need to build it, and then run it!
