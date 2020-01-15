@@ -8,7 +8,9 @@ const Layout = ({ children }) => {
 
   // Scroll to top on location change so you see your new review at the top of the list!
   useEffect(() => {
-    window.scrollTo(0, 0);
+    if (window && window.scrollTo) {
+      window.scrollTo(0, 0);
+    }
   }, [location]);
 
   return (
