@@ -43,12 +43,12 @@ Runs the image locally, now simply navigate to `http://localhost:8080` in your b
 - `React Helmet` - Used to change values within the `<head>` for each route, I've only used it to change the page title in this project.
 - `React Testing Library` - Used for testing React DOM components.
 - `CSS Modules` - My prefered way of styling components.
-- `SCSS` - For this simple project, I opted to use SCSS as I like to utilise it's mixins and functions etc, however should the project require me to dynamically change variables for theming etc, then I would use CSS custom properties.
+- `SCSS` - For this simple project, I opted to use SCSS as I like to utilise it's mixins and functions etc, however should the project require me to dynamically change variables for theming etc, then I would use CSS custom properties or styled components.
 - `classnames` - A really useful package to help generate dynamic class names for components.
 - `Lodash` - Used for a few helper functions, saves writing them yourself!
 - `Formik` - Makes building forms in React simple!
 - `Yup` - Used with `Formik` to specify the form schema and validation rules.
-- `React Stars` - For the displaying of reviews, I wanted to code my own star rating component, which I did, but due to time constraints I opted to use this package for submitting a rating.
+- `React Stars` - For the displaying of reviews, I wanted to code my own star rating component, which I did for the displaying of ratings, but due to time constraints I opted to use this package for submitting a rating.
 
 ## DevOps
 

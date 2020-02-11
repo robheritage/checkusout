@@ -2,7 +2,7 @@
   "name": "checkusout.com",
   "version": "0.1.0",
   "private": true,
-  "description": "An example Review site for Checkout.com's Senior Front-End Engineer code test",
+  "description": "An example Review site built with React",
   "author": "Rob Heritage",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",

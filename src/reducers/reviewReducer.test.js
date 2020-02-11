@@ -1,4 +1,5 @@
 import { reviewReducer } from './reviewReducer';
+import { ADD_REVIEW } from '../constants/reviewTypes';
 
 describe('review reducer', () => {
   it('should return blank initial state', () => {
@@ -15,7 +16,7 @@ describe('review reducer', () => {
   };
   it('should add a new review to state', () => {
     const actual = reviewReducer([], {
-      type: 'ADD_REVIEW',
+      type: ADD_REVIEW,
       review
     });
     const expected = [{ ...review }];

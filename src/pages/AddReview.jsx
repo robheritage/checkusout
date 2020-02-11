@@ -1,10 +1,11 @@
-import React, { useContext } from 'react';
+import React, { useContext, memo } from 'react';
 import { Helmet } from 'react-helmet';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from "yup";
 import ReactStars from 'react-stars';
 
 import { ReviewContext } from '../contexts/ReviewContext';
+import { ADD_REVIEW } from '../constants/reviewTypes';
 
 import { Button, Container, Card, Input, Loader } from '../components';
 
@@ -33,7 +34,7 @@ const AddReview = ({ history }) => {
   const handleSubmit = (review) => {
     // Mimic an API call delay to show feedback
     setTimeout(() => {
-      dispatch({ type: 'ADD_REVIEW', review });
+      dispatch({ type: ADD_REVIEW, review });
       history.push('/');
     }, 400);
   }
@@ -125,4 +126,4 @@ const AddReview = ({ history }) => {
   );
 };
 
-export default AddReview;
+export default memo(AddReview);

@@ -17,16 +17,6 @@
     flex-direction: row;
   }
 
-  &__logo {
-    padding: 1.25rem 0 0;
-    width: 185px;
-    min-width: 115px;
-
-    @media (min-width: 600px) {
-      padding: 0;
-    }
-  }
-
   &__nav {
     flex: 1;
     padding-left: $spacer;
